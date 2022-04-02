@@ -40,6 +40,7 @@ public class TaiKhoan {
         System.out.println("Tên Tài Khoản: " + this.TenTaiKhoan);
         System.out.println("Số Tài Khoản: " + this.SoTaiKhoan);
         System.out.println("Số Tiền trong Tài Khoản: " + this.SoTien);
+        System.out.println("==================");
     }
     public void napTien(double soTienNap) {
         setSoTien(this.SoTien + soTienNap);

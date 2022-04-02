@@ -59,6 +59,15 @@ public class Sach {
     }
 
     public void thongTinSach() {
-
+        System.out.println("Thông tin sách: ");
+        System.out.println("=================");
+        System.out.println("Mã sách: " + maSach);
+        System.out.println("Tên sách: " + tenSach);
+        System.out.println("Đơn giá: " + donGia);
+        System.out.println("Số lượng: " + soLuong);
+        System.out.println("NXB: " + nxb);
+    }
+    public double thanhTien() {
+        return 0;
     }
 }
