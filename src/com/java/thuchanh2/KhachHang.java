@@ -7,6 +7,15 @@ abstract class KhachHang {
     private float soLuongDien;
     private double donGia;
 
+    public KhachHang(long maKH, String tenKH, String ngayHoaDon, float soLuongDien, double donGia) {
+        this.maKH = maKH;
+        this.tenKH = tenKH;
+        this.ngayHoaDon = ngayHoaDon;
+        this.soLuongDien = soLuongDien;
+        this.donGia = donGia;
+    }
+    public KhachHang() {}
+
     public long getMaKH() {
         return maKH;
     }

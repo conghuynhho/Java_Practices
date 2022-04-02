@@ -1,6 +1,6 @@
 package com.java.thuchanh2;
 
-public class KHSinhHoat extends KHKinhDoanh {
+public class KHSinhHoat extends KhachHang {
     private float dinhMuc;
 
     public KHSinhHoat(long maKH, String tenKH, String ngayHoaDon, float soLuongDien, double donGia, float dinhMuc) {
@@ -20,14 +20,16 @@ public class KHSinhHoat extends KHKinhDoanh {
         this.dinhMuc = dinhMuc;
     }
 
+    @Override
     public double thanhTien() {
         if(getSoLuongDien() <= dinhMuc) {
             return getSoLuongDien() * getDonGia();
         } else {
-            return (dinhMuc * getDonGia()) + (getSoLuongDien() - dinhMuc * getDonGia() * 2);
+            return (dinhMuc * getDonGia()) + ((getSoLuongDien() - dinhMuc) * getDonGia() * 2);
         }
     }
 
+    @Override
     public void inThongTin() {
         System.out.println("Thông tin sử dụng điện: ");
         System.out.println("========================");
@@ -37,8 +39,8 @@ public class KHSinhHoat extends KHKinhDoanh {
         System.out.println("Số lượng điện: " + getSoLuongDien());
         System.out.println("Đơn giá: " + getDonGia());
         System.out.println("Định Mức: " + dinhMuc);
-        System.out.println("========================");
         System.out.println("Thành Tiền: " + thanhTien());
+        System.out.println("========================");
     }
 
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Buoi2 {
+public class BaiTapThucHanh2_18520866 {
 
     /*
     * Common Methods
@@ -235,7 +235,7 @@ public class Buoi2 {
     }
 
     public static void cauTienDien() {
-        ArrayList<Object> khachHangArrayList = new ArrayList<Object>();
+        ArrayList<KhachHang> khachHangArrayList = new ArrayList<KhachHang>();
 
         mainloop:
         while (true) {
@@ -245,6 +245,10 @@ public class Buoi2 {
             System.out.println("3: Khách Hàng Sản Xuất");
             System.out.println("4: Thoát chương trình ....");
             int menuIndex = nhap.InputIntNotNegative("Chọn loại Khách Hàng");
+
+            if(menuIndex != 1 && menuIndex != 2 && menuIndex != 3) {
+                break;
+            }
 
             System.out.println("Nhập thông tin khách hàng sử dụng điện: ");
             System.out.println("Nhập Mã Khách Hàng là rỗng để dừng nhập");
@@ -295,13 +299,12 @@ public class Buoi2 {
                     KHSanXuat khSanXuat = new KHSanXuat(maKH, tenKH, ngayHoaDon, soLuongDien, donGia, phaDien);
                     khachHangArrayList.add(khSanXuat);
                 }
-                default -> System.out.println("Thoát ....");
             }
         }
 
-//        for (Object o : khachHangArrayList) {
-//            o.inThonkTin();
-//        }
+        for (KhachHang o : khachHangArrayList) {
+            o.inThongTin();
+        }
     }
 
 
