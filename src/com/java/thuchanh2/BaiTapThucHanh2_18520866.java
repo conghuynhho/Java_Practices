@@ -183,7 +183,6 @@ public class BaiTapThucHanh2_18520866 {
             Xe xe = new Xe(tenChuXe, loaiXe, triGia, dungTichXylanh);
             xeArrayList.add(xe);
         }
-        System.out.println("1");
 
         Xe[] xeArray = new Xe[xeArrayList.size()];
         xeArray = xeArrayList.toArray(xeArray);
